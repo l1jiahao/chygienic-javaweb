@@ -1,6 +1,6 @@
 package com.ncu.chygienicjavaweb.mapper;
 
-import com.ncu.chygienicjavaweb.entity.User;
+import com.ncu.chygienicjavaweb.entity.Student;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
 
@@ -10,9 +10,9 @@ import java.util.List;
 /**
  * @author nogra
  */
-public interface UserMapper {
+public interface StudentMapper {
 
     @Select("SELECT * FROM test")
     @Results()
-    List<User> getAll();
+    ArrayList<Student> getAll();
 }

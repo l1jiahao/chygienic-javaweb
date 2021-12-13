@@ -1,7 +1,7 @@
 package com.ncu.chygienicjavaweb.controller;
 
-import com.ncu.chygienicjavaweb.entity.User;
-import com.ncu.chygienicjavaweb.mapper.UserMapper;
+import com.ncu.chygienicjavaweb.entity.Student;
+import com.ncu.chygienicjavaweb.mapper.StudentMapper;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,11 +12,10 @@ import java.util.List;
 @RestController
 public class App {
     @Resource
-    private UserMapper userMapper;
+    private StudentMapper studentMapper;
 
     @RequestMapping("/getall")
-    public List<User> getAll(){
-        List<User> users = userMapper.getAll();
-        return users;
+    public ArrayList<Student> getStudents(){
+        return studentMapper.getAll();
     }
 }

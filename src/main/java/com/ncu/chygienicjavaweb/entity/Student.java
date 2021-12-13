@@ -8,7 +8,7 @@ import java.io.Serializable;
  * @author nogra
  */
 @Data
-public class User implements Serializable {
+public class Student implements Serializable {
     private String name;
     private int sex;
     private int id;
