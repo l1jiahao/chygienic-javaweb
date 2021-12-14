@@ -34,4 +34,21 @@ public class UserController {
 
         return jsonTotal;
     }
+
+    @RequestMapping("/getOne")
+    public JSONObject getOne(int id){
+        User user = userMapper.getOne(id);
+
+        JSONObject jsonTotal = new JSONObject();
+
+        if (user==null){
+            jsonTotal.put("status",0);
+            jsonTotal.put("message","未找到对应用户");
+        }
+        else {
+            jsonTotal.put("status", 1);
+            jsonTotal.put("message", user);
+        }
+        return jsonTotal;
+    }
 }
