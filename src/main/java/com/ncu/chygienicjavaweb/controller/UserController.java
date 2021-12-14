@@ -1,10 +1,8 @@
 package com.ncu.chygienicjavaweb.controller;
 
-import com.alibaba.fastjson.JSON;
+
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.mysql.cj.xdevapi.JsonArray;
-import com.mysql.cj.xdevapi.JsonValue;
 import com.ncu.chygienicjavaweb.entity.User;
 import com.ncu.chygienicjavaweb.mapper.UserMapper;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,23 +15,10 @@ import java.util.ArrayList;
  * @author nogra
  */
 @RestController
+@RequestMapping("/user")
 public class UserController {
     @Resource
     private UserMapper userMapper;
-
-    @RequestMapping("getAllUsers")
-    public JSONObject getAll(){
-        ArrayList<User> users = userMapper.getAll();
-
-        JSONArray userJsonAry = new JSONArray();
-        userJsonAry.addAll(users);
-
-        JSONObject jsonTotal =new JSONObject();
-        jsonTotal.put("message",userJsonAry);
-        jsonTotal.put("status",1);
-
-        return jsonTotal;
-    }
 
     @RequestMapping("/getOne")
     public JSONObject getOne(int id){
@@ -51,4 +36,19 @@ public class UserController {
         }
         return jsonTotal;
     }
+
+    @RequestMapping("/getAll")
+    public JSONObject getAll(){
+        ArrayList<User> users = userMapper.getAll();
+
+        JSONArray userJsonAry = new JSONArray();
+        userJsonAry.addAll(users);
+
+        JSONObject jsonTotal =new JSONObject();
+        jsonTotal.put("message",userJsonAry);
+        jsonTotal.put("status",1);
+
+        return jsonTotal;
+    }
+
 }

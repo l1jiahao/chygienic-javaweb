@@ -9,6 +9,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ChygienicJavawebApplication {
 
     public static void main(String[] args) {
+
+
         SpringApplication.run(ChygienicJavawebApplication.class, args);
     }
 
