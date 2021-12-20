@@ -9,5 +9,5 @@ import org.apache.ibatis.annotations.Insert;
 public interface SubmitProjectMapper {
 
     @Insert("insert into user_json (json_content) values(#{json_content})")
-    void SubmitTechProject(JSON json_content);
+    void SubmitTechProject(String json_content);
 }
