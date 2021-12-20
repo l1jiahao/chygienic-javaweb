@@ -39,4 +39,6 @@ public interface UserMapper {
             @Result(property = "phone", column = "phone_number")
     })
     User getOne(int id);
+
+
 }
