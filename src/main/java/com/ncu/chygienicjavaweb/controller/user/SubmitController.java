@@ -1,4 +1,4 @@
-package com.ncu.chygienicjavaweb.controller;
+package com.ncu.chygienicjavaweb.controller.user;
 
 
 import com.alibaba.fastjson.JSONObject;
@@ -28,7 +28,7 @@ public class SubmitController {
         Integer proj_type_id=(Integer)jsonContent.get("proj_type_id");
         JSONObject jsonObject=(JSONObject)jsonContent.getJSONObject("json_content");//获取
         Integer limit_id=(Integer)jsonContent.get("limit_id");
-        String appendix=(String)jsonContent.get("appendix");
+        Integer appendix=(Integer)jsonContent.get("appendix");
         //
         UserJson userJson=new UserJson();//创建userjson对象，存user_json表，并获取到表的id，该id可用于存下一个project表
         userJson.setJson_content(jsonObject.toJSONString());

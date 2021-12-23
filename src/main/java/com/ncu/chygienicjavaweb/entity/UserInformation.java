@@ -5,21 +5,10 @@ public class UserInformation {
     private int sex;
     private String school;
     private String career;
-    private String identity;
-    private String phone;
-    private String account;
-
-    public UserInformation
-            (String name, int sex, String school, String career,
-             String identity, String phone, String account) {
-        this.name = name;
-        this.sex = sex;
-        this.school = school;
-        this.career = career;
-        this.identity = identity;
-        this.phone = phone;
-        this.account = account;
-    }
+    private String identity_number;
+    private String phone_number;
+    private int user_id;
+    private int role_id;
 
     public String getName() {
         return name;
@@ -53,27 +42,35 @@ public class UserInformation {
         this.career = career;
     }
 
-    public String getIdentity() {
-        return identity;
+    public String getIdentity_number() {
+        return identity_number;
     }
 
-    public void setIdentity(String identity) {
-        this.identity = identity;
+    public void setIdentity_number(String identity_number) {
+        this.identity_number = identity_number;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getPhone_number() {
+        return phone_number;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setPhone_number(String phone_number) {
+        this.phone_number = phone_number;
     }
 
-    public String getAccount() {
-        return account;
+    public int getUser_id() {
+        return user_id;
     }
 
-    public void setAccount(String account) {
-        this.account = account;
+    public void setUser_id(int user_id) {
+        this.user_id = user_id;
+    }
+
+    public int getRole_id() {
+        return role_id;
+    }
+
+    public void setRole_id(int role_id) {
+        this.role_id = role_id;
     }
 }

@@ -7,7 +7,15 @@ public class Project {
         private Integer json_id;
         private Integer limit_id;
         private Integer project_status;
-        private String appendix;
+        private Integer appendix;
+
+    public Integer getAppendix() {
+        return appendix;
+    }
+
+    public void setAppendix(Integer appendix) {
+        this.appendix = appendix;
+    }
 
     public int getId() {
         return id;
@@ -57,11 +65,5 @@ public class Project {
         this.project_status = project_status;
     }
 
-    public String getAppendix() {
-        return appendix;
-    }
 
-    public void setAppendix(String appendix) {
-        this.appendix = appendix;
-    }
 }

@@ -1,4 +1,4 @@
-package com.ncu.chygienicjavaweb.controller;
+package com.ncu.chygienicjavaweb.controller.user;
 
 
 import com.alibaba.fastjson.JSONObject;
