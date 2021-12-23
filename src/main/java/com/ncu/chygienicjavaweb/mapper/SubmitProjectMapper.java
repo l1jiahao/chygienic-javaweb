@@ -5,14 +5,16 @@ import com.ncu.chygienicjavaweb.entity.submitproject.Project;
 import com.ncu.chygienicjavaweb.entity.submitproject.UserJson;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Options;
-
+import org.apache.ibatis.annotations.Result;
+import org.apache.ibatis.annotations.Results;
 
 
 public interface SubmitProjectMapper {
 
     //将json数据存入到user_json表中，同时获取到该项对应的id（暂时未实现）
     @Insert("insert into user_json (json_content)  values(#{json_content})")
-    @Options(useGeneratedKeys = true, keyProperty = "id")
+    @Results({@Result(property = "json_id",column = "id")})
+    @Options(useGeneratedKeys = true, keyProperty = "json_id")
     void SubmitTechProject(UserJson userJson);
 
 

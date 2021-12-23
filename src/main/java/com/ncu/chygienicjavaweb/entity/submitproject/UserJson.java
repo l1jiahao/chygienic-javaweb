@@ -1,15 +1,15 @@
 package com.ncu.chygienicjavaweb.entity.submitproject;
 
 public class UserJson {
-    private int id;
+    private int json_id;
     private String json_content;
 
-    public int getId() {
-        return id;
+    public int getJson_id() {
+        return json_id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setJson_id(int json_id) {
+        this.json_id = json_id;
     }
 
     public String getJson_content() {

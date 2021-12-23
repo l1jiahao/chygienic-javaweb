@@ -35,7 +35,7 @@ public class SubmitController {
 
         //这里执行的是插入user_json表的方法
         submitProjectMapper.SubmitTechProject(userJson);
-        int json_id=userJson.getId();//获取到json表的id
+        int json_id=userJson.getJson_id();//获取到json表的id
 
 
         //这里代码比较繁琐，可以用构造方法，但我先用set方法

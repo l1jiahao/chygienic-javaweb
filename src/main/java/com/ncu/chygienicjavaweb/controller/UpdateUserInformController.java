@@ -35,7 +35,7 @@ public class UpdateUserInformController {
     //修改密码
     @RequestMapping(value ="/updatepassword",method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
     public JSONObject UpdatePassword(@RequestBody JSONObject jsonContent){
-        String password=(String)jsonContent.get("user_password");
+        String password=(String)jsonContent.get("password");
         Integer user_id=(Integer)jsonContent.get("user_id");
 
         updateUserMapper.UpdateUserPassword(password,user_id);//更新账号密码
