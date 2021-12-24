@@ -18,6 +18,7 @@ public class PublishController {
     @Resource
     PublishMapper publishMapper;
 
+
     //对应第十个接口，存入两个表
     @RequestMapping(value ="/publishcolumn",method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
     public JSONObject PublishColumn(@RequestBody JSONObject jsonContent){
