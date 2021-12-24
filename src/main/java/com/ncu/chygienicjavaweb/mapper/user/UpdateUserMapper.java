@@ -1,4 +1,4 @@
-package com.ncu.chygienicjavaweb.mapper;
+package com.ncu.chygienicjavaweb.mapper.user;
 
 import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.Results;

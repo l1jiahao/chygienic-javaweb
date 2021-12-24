@@ -2,7 +2,7 @@ package com.ncu.chygienicjavaweb.controller.user;
 
 
 import com.alibaba.fastjson.JSONObject;
-import com.ncu.chygienicjavaweb.mapper.UpdateJsonMapper;
+import com.ncu.chygienicjavaweb.mapper.user.UpdateJsonMapper;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

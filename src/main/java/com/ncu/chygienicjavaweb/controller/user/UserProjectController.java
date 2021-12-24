@@ -3,7 +3,7 @@ package com.ncu.chygienicjavaweb.controller.user;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.ncu.chygienicjavaweb.entity.UserProject;
-import com.ncu.chygienicjavaweb.mapper.GetUserProjectMapper;
+import com.ncu.chygienicjavaweb.mapper.user.GetUserProjectMapper;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

@@ -4,7 +4,7 @@ package com.ncu.chygienicjavaweb.controller.user;
 import com.alibaba.fastjson.JSONObject;
 import com.ncu.chygienicjavaweb.entity.submitproject.Project;
 import com.ncu.chygienicjavaweb.entity.submitproject.UserJson;
-import com.ncu.chygienicjavaweb.mapper.SubmitProjectMapper;
+import com.ncu.chygienicjavaweb.mapper.user.SubmitProjectMapper;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

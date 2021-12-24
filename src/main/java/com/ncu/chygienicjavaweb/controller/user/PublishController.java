@@ -2,7 +2,7 @@ package com.ncu.chygienicjavaweb.controller.user;
 
 import com.alibaba.fastjson.JSONObject;
 import com.ncu.chygienicjavaweb.entity.LimitColumn;
-import com.ncu.chygienicjavaweb.mapper.PublishMapper;
+import com.ncu.chygienicjavaweb.mapper.user.PublishMapper;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

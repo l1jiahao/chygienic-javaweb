@@ -2,7 +2,7 @@ package com.ncu.chygienicjavaweb.controller.user;
 
 import com.alibaba.fastjson.JSONObject;
 import com.ncu.chygienicjavaweb.entity.submitproject.UserJson;
-import com.ncu.chygienicjavaweb.mapper.GetoneProjectMapper;
+import com.ncu.chygienicjavaweb.mapper.user.GetoneProjectMapper;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,9 +16,9 @@ public class GetoneProjectController {
     GetoneProjectMapper getoneProjectMapper;
 
     @RequestMapping("/get")
-    public JSONObject get(Integer project_id){
+    public JSONObject get(Integer proj_id){
         UserJson userJson=new UserJson();
-        userJson=getoneProjectMapper.GetOneProject(project_id);
+        userJson=getoneProjectMapper.GetOneProject(proj_id);
         //
         String test=userJson.getJson_content();
         JSONObject jsonStr = JSONObject.parseObject(test);
