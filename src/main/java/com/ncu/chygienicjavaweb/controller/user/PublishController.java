@@ -30,9 +30,13 @@ public class PublishController {
         String establish_end_time=(String) jsonContent.get("establish_end_time");
 
         //要把establish_time等获取到，（转换为String类型），再把这个转换回LocalDataTime类型
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-        LocalDateTime start= LocalDateTime.parse(establish_time, formatter);
-        LocalDateTime end= LocalDateTime.parse(establish_end_time, formatter);
+//        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+//        LocalDateTime start= LocalDateTime.parse(establish_time, formatter);
+//        LocalDateTime end= LocalDateTime.parse(establish_end_time, formatter);
+
+//string格式转Date格式
+        java.sql.Date start = java.sql.Date.valueOf(establish_time);
+        java.sql.Date end = java.sql.Date.valueOf(establish_end_time);
 
         LimitColumn limitColumn=new LimitColumn();
         limitColumn.setLimit_columns(jsonObject.toJSONString());

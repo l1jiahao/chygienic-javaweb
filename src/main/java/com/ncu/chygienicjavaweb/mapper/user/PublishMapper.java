@@ -7,6 +7,7 @@ import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.Results;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 
 public interface PublishMapper {
     //对应第十个接口，先存limit_column表，再存project_batch表
@@ -23,7 +24,7 @@ public interface PublishMapper {
             "establish_start_time, establish_end_time)\n" +
             "values (#{proj_batch_name},#{limit_id},#{proj_type_id}," +
             "#{establish_time},#{establish_end_time})")
-    void InsertProjectBatch(Integer limit_id,String proj_batch_name,Integer proj_type_id,LocalDateTime establish_time,LocalDateTime establish_end_time);
+    void InsertProjectBatch(Integer limit_id, String proj_batch_name, Integer proj_type_id, Date establish_time, Date establish_end_time);
 
 
 
