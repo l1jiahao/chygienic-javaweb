@@ -54,7 +54,7 @@ public class SubmitController {
         submitProjectMapper.SubmitUserProject(user_id,project_id);
 
         JSONObject jsonTotal =new JSONObject();
-        jsonTotal.put("message","填报成功");
+        jsonTotal.put("message",project_id);
         jsonTotal.put("status",1);
 
         return jsonTotal;
