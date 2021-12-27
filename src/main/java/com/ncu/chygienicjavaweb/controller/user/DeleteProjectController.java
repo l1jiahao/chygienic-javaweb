@@ -23,6 +23,9 @@ public class DeleteProjectController {
         int j=deleteProjectMapper.DeleteUser_project(proj_id);
 
         int k=deleteProjectMapper.DeleteProjectColumn(proj_id);
+
+        int l=deleteProjectMapper.DeleteProjectAppendix(proj_id);
+
         JSONObject jsonTotal =new JSONObject();
         if(i==1&&j==1&k==1){
             jsonTotal.put("message","删除成功");

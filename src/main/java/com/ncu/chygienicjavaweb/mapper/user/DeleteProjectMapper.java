@@ -16,4 +16,8 @@ public interface DeleteProjectMapper {
     //最后删除project表
     @Delete("delete from project where id=#{project_id}")
     int DeleteProjectColumn(Integer project_id);
+
+    //还要删一个附件表
+    @Delete("delete from project_appendix where project_id=#{project_id}")
+    int DeleteProjectAppendix(Integer project_id);
 }
