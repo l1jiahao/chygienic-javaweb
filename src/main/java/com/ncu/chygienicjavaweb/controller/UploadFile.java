@@ -20,8 +20,8 @@ public class UploadFile {
     @RequestMapping("/upload")
     @ResponseBody
     public String create(@RequestParam("projId") Integer projId, @RequestPart MultipartFile file) throws IOException {
-//        String path = "/home/ubuntu/server/upload/";
-        String path = "C:\\Users\\姚望辰\\Desktop\\";
+        String path = "/home/ubuntu/server/upload/";
+//        String path = "/home/nogra/Public/";
         String fileName = file.getOriginalFilename();
         String filePath = path + fileName;
 
@@ -30,7 +30,7 @@ public class UploadFile {
 
         uploadFileMapper.insertFile(projId,dest.getAbsolutePath());
 
-        return "Upload file success : " + dest.getAbsolutePath() + projId;
+        return "Upload file success : " + dest.getAbsolutePath();
     }
 
 
@@ -57,15 +57,15 @@ public class UploadFile {
 
     @RequestMapping("/download")
     public String fileDownLoad(HttpServletResponse response, @RequestParam("fileName") String fileName){
-        File file = new File("/home/nogra/Public/" +'/'+ fileName);
+        File file = new File("/home/ubuntu/server/upload/" + fileName);
         if(!file.exists()){
+            response.setHeader("success", "0" );
             return "下载文件不存在";
         }
         response.reset();
-        response.setContentType("application/octet-stream");
-        response.setCharacterEncoding("utf-8");
         response.setContentLength((int) file.length());
-        response.setHeader("Content-Disposition", "attachment;filename=" + fileName );
+        response.setHeader("download", fileName );
+        response.setHeader("success", "1" );
 
         try(BufferedInputStream bis = new BufferedInputStream(new FileInputStream(file));) {
             byte[] buff = new byte[1024];
